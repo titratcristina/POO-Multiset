@@ -9,3 +9,11 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+CMakeLists.txt
+cmake-build-debug/POO_Multiset.cbp
+cmake-build-debug/POO_Multiset
+.idea/vcs.xml
+.idea/POO-Multiset.iml
+.idea/modules.xml
+.idea/misc.xml
+.idea/.name
