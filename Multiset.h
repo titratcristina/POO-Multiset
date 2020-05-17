@@ -48,4 +48,33 @@ Multiset<T, F>::Multiset() {
 	head->prev = head;
 }
 
+// constructor de copiere
+template<class T, class F>
+Multiset<T, F>::Multiset(const Multiset &object) {
+	if (this != &object) {
+		size = object.size;
+		distinctSize = object.distinctSize;
+
+		head = new Node;
+		head->next = head;
+		head->prev = head;
+
+		Node *p = head;
+		Node *q = object.head->next;
+
+		while (q != object.head) {
+			p->next = new Node;
+
+			p->next->info = q->info;
+			p->next->n = q->n;
+			p->next->prev = p;
+
+			q = q->next;
+			p = p->next;
+		}
+		p->next = head;
+		head->prev = p;
+	}
+}
+
 #endif //POO_MULTISET_MULTISET_H
