@@ -157,4 +157,22 @@ void Multiset<T, F>::insert(const T &value) {
 	}
 }
 
+// metodă pentru ștergerea unui element din multiset (se șterge prima apariție)
+template<class T, class F>
+void Multiset<T, F>::remove(const T &value) {
+	Node *p;
+	for (p = head->next; p != head; p = p->next) {
+		if (p->info == value) {
+			p->n--;
+			size--;
+			// dacă e un singur element se șterge nodul
+			if (p->n == 0) {
+				p->prev->next = p->next;
+				p->next->prev = p->prev;
+				distinctSize--;
+			}
+		}
+	}
+}
+
 #endif //POO_MULTISET_MULTISET_H
