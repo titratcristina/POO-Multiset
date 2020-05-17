@@ -11,7 +11,7 @@ Implementați o clasă template pentru multiset. Clasa oferă acces rapid la ele
 - metodă care elimină toate aparițiile unui element din multiset;
 - metodă care întoarce numărul de elemente distincte din multiset;
 - supraîncărcarea operatorului de afișare;
-- specializarea clasei Comparator  pentru  double,  care  sa  considere  douavalori egale daca partea zecimala este egala.
+- specializarea clasei Comparator  pentru  double,  care  sa  considere  doua valori egale daca partea zecimala este egala.
 
 ## Cerințe globale și obligatorii
 - Alocare dinamică a memorie;
@@ -20,7 +20,7 @@ Implementați o clasă template pentru multiset. Clasa oferă acces rapid la ele
 - Este interzisă folosirea STL-urilor dacă, prin folosirea lor, rezolvarea devinetrivială (e.g.  daca tema voastra este multiset si folositi clasa multiset din STL, nota pe rezolvare va fi 0);
 - Utilizarea a cat mai multe concepte POO invatate
 - Utilizarea assert pentru testarea funcționalităților;
-- Tema  trebuie  să  compileze  fără  a  utiliza  anumite  flag-uri  de  compilare(cu excepția cazurilor în care pentru compilare este necesară o anumităversiune de C++) și să respecte standardele C++ pentru sintaxă;
+- Tema  trebuie  să  compileze  fără  a  utiliza  anumite flag-uri de compilare (cu excepția cazurilor în care pentru compilare este necesară o anumităversiune de C++) și să respecte standardele C++ pentru sintaxă;
 
 ## Deadline:  
 17 mai 2020, ora 23:59;
