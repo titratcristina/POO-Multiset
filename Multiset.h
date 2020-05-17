@@ -188,4 +188,17 @@ int Multiset<T, F>::count(const T &value) const {
 	return 0;
 }
 
+// metodă care verifică dacă un element se află în multiset;
+template<class T, class F>
+bool Multiset<T, F>::find(const T &value) const {
+	Node *p = head->next;
+	while (p != head) {
+		if (p->info == value) {
+			return true;
+		}
+		p = p->next;
+	}
+	return false;
+}
+
 #endif //POO_MULTISET_MULTISET_H
