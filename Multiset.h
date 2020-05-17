@@ -259,4 +259,16 @@ ostream &operator<<(ostream &output, Multiset<double> const &m) {
 	return output;
 }
 
+// destructor
+template<class T, class F>
+Multiset<T, F>::~Multiset() {
+	Node *p = head->next;
+	while (p != head) {
+		head->next = p->next;
+		delete p;
+		p = head->next;
+	}
+	delete head;
+}
+
 #endif //POO_MULTISET_MULTISET_H
