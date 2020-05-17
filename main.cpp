@@ -36,6 +36,15 @@ void multisetTests() {
 	N.insert(5);
 	assert(N.count(5) == 2);        // verific dacă numărul aparițiilor valorii 5 este 3
 
+	Multiset<double> D;
+
+	D.insert(1.54);
+	D.insert(2.54);
+	D.insert(3.34);
+	D.insert(4.46);
+
+	assert(D.find(3.34) == 1);
+
 }
 
 int main() {
