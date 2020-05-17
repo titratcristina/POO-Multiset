@@ -29,6 +29,9 @@ void multisetTests() {
 	Multiset<int> C(M);            	// constructor de copiere
 	assert(C.find(2) == 1 && C.find(3) == 1 && C.find(4) == 1); // verific ca elementele din C să fie cele din M
 
+	N = M;                         	// copiez elementele din M in N
+	assert(N.find(2) == 1 && N.find(3) == 1 && N.find(4) == 1); // verific ca elementele din N să fie cele din M
+
 }
 
 int main() {
