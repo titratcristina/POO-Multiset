@@ -248,4 +248,15 @@ ostream &operator<<(ostream &output, Multiset<int> const &M) {
 	return output;
 }
 
+// supraîncărcarea operatorului de afișare pentru elemente de tip double
+ostream &operator<<(ostream &output, Multiset<double> const &m) {
+	typename Multiset<double>::Node *p = m.head->next;
+	for (int i = 0; i < m.size; i++) {
+		output << p->info << " ";
+		p = p->next;
+	}
+	output << endl;
+	return output;
+}
+
 #endif //POO_MULTISET_MULTISET_H
