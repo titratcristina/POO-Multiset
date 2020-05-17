@@ -201,4 +201,22 @@ bool Multiset<T, F>::find(const T &value) const {
 	return false;
 }
 
+// metodă care elimină toate aparițiile unui element din multiset;
+template<class T, class F>
+void Multiset<T, F>::removeAll(const T &value) {
+	Node *p;
+	for (p = head->next; p != head; p = p->next) {
+		if (p->info == value) {
+			int removed = p->n;
+
+			p->prev->next = p->next;
+			p->next->prev = p->prev;
+			p = p->next;
+
+			distinctSize--;
+			size -= removed;
+		}
+	}
+}
+
 #endif //POO_MULTISET_MULTISET_H
