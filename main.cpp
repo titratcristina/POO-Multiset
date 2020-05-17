@@ -26,6 +26,9 @@ void multisetTests() {
 
 	assert(M.getDistinct() == 3);  	// 3 elemente distincte
 
+	Multiset<int> C(M);            	// constructor de copiere
+	assert(C.find(2) == 1 && C.find(3) == 1 && C.find(4) == 1); // verific ca elementele din C să fie cele din M
+
 }
 
 int main() {
