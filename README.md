@@ -2,7 +2,7 @@
 ```Multiset<class T, class F = Comparator<T>>```
     
 ## Cerințe:
-Implementați o clasă template pentru multiset.  Clasa oferă access rapid la el-ementele  pe  care  aceasta  le  memoreză,  fără  a  impune  o  anumită  restriție  peordinea elementelor.  Un element poate apărea de mai multe ori.  lasa Compara-tor<T>va fi folosita pe post de comparator default pentru determina daca ovaloare exista deja in multiset.  Clasa Multiset trebuie să ofere:
+Implementați o clasă template pentru multiset. Clasa oferă acces rapid la elementele pe care aceasta le memoreză, fără a  impune o anumită restriție peordinea elementelor. Un element poate apărea de mai multe ori. Clasa Comparator<T> va fi folosită pe post de comparator default pentru determina daca o valoare există deja în multiset. Clasa Multiset trebuie să ofere:
 - constructor fără parametrii care inițializează un multiset gol;
 - constructor de copiere și operatorul de atribuire;
 - metodă pentru adăugare și ștergere element din multiset (se șterge primaapariție);
