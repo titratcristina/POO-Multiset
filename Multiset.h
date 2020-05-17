@@ -225,4 +225,16 @@ int Multiset<T, F>::getDistinct() const {
 	return distinctSize;
 }
 
+// supraîncărcarea operatorului de afișare;
+template<class T>
+ostream &operator<<(ostream &output, Multiset<T> const &M) {
+	typename Multiset<T>::Node *p = M.head->next;
+	for (int i = 0; i < M.size; i++) {
+		output << p->info << " ";
+		p = p->next;
+	}
+	output << endl;
+	return output;
+}
+
 #endif //POO_MULTISET_MULTISET_H
