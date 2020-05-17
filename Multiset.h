@@ -175,4 +175,17 @@ void Multiset<T, F>::remove(const T &value) {
 	}
 }
 
+// metodă care întoarce numărul de apariții ale unui element;
+template<class T, class F>
+int Multiset<T, F>::count(const T &value) const {
+	Node *p = head->next;
+	while (p != head) {
+		if (p->info == value) {
+			return p->n;
+		}
+		p = p->next;
+	}
+	return 0;
+}
+
 #endif //POO_MULTISET_MULTISET_H
