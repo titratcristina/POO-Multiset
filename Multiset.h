@@ -237,4 +237,15 @@ ostream &operator<<(ostream &output, Multiset<T> const &M) {
 	return output;
 }
 
+// supraîncărcarea operatorului de afișare pentru elemente de tip int
+ostream &operator<<(ostream &output, Multiset<int> const &M) {
+	typename Multiset<int>::Node *p = M.head->next;
+	for (int i = 0; i < M.size; i++) {
+		output << p->info << " ";
+		p = p->next;
+	}
+	output << endl;
+	return output;
+}
+
 #endif //POO_MULTISET_MULTISET_H
