@@ -77,4 +77,42 @@ Multiset<T, F>::Multiset(const Multiset &object) {
 	}
 }
 
+// operatorul de atribuire
+template<class T, class F>
+Multiset<T, F> &Multiset<T, F>::operator=(const Multiset &object) {
+	if (this != &object) {
+		Node *mp = head->next;
+		while (mp != head) {
+			head->next = mp->next;
+			delete mp;
+			mp = head->next;
+		}
+		delete head;
+
+		size = object.size;
+		distinctSize = object.distinctSize;
+
+		head = new Node;
+		head->next = head;
+		head->prev = head;
+
+		Node *p = head;
+		Node *q = object.head->next;
+
+		while (q != object.head) {
+			p->next = new Node;
+
+			p->next->info = q->info;
+			p->next->n = q->n;
+			p->next->prev = p;
+
+			q = q->next;
+			p = p->next;
+		}
+		p->next = head;
+		head->prev = p;
+	}
+	return *this;
+}
+
 #endif //POO_MULTISET_MULTISET_H
