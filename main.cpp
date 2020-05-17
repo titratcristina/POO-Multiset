@@ -24,6 +24,8 @@ void multisetTests() {
 	M.removeAll(1);          	// se sterg toate aparitiile lui 1
 	assert(M.count(1) == 0);        // verific dacă numărul aparițiilor valorii 1 după ștergerea totală este 2
 
+	assert(M.getDistinct() == 3);  	// 3 elemente distincte
+
 }
 
 int main() {
