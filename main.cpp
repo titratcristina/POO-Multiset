@@ -45,6 +45,8 @@ void multisetTests() {
 
 	assert(D.find(3.34) == 1);
 
+	cout << D; 						// testare cout
+
 }
 
 int main() {
