@@ -115,4 +115,46 @@ Multiset<T, F> &Multiset<T, F>::operator=(const Multiset &object) {
 	return *this;
 }
 
+// metodă pentru adăugarea unui element în multiset
+template<class T, class F>
+void Multiset<T, F>::insert(const T &value) {
+	Node *p;
+	for (p = head->next; p != head; p = p->next) {
+		if (value == p->info) {
+			p->n++;
+			size++;
+			return;
+		}
+	}
+	if (size == 0) {
+		Node *firstNode = new Node;
+
+		firstNode->info = value;
+		firstNode->next = head;
+
+		head->next = firstNode;
+		head->prev = firstNode;
+
+		firstNode->prev = head;
+		firstNode->n++;
+
+		distinctSize++;
+		size++;
+	} else {
+		Node *newNode = new Node;
+
+		newNode->info = value;
+		newNode->next = head;
+
+		head->prev->next = newNode;
+		head->prev = newNode;
+
+		newNode->prev = head->prev;
+		newNode->n++;
+
+		distinctSize++;
+		size++;
+	}
+}
+
 #endif //POO_MULTISET_MULTISET_H
