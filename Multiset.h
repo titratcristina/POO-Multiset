@@ -219,4 +219,10 @@ void Multiset<T, F>::removeAll(const T &value) {
 	}
 }
 
+// metodă care întoarce numărul de elemente distincte din multiset;
+template<class T, class F>
+int Multiset<T, F>::getDistinct() const {
+	return distinctSize;
+}
+
 #endif //POO_MULTISET_MULTISET_H
