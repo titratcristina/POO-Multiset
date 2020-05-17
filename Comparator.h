@@ -16,4 +16,10 @@ bool Comparator<T>::equal(T a, T b) {
 	return (a - int(a) == b - int(b));
 }
 
+// specializarea clasei Comparator pentru double, care să considere două valori egale daca partea zecimala este egala.
+template<>
+bool Comparator<double>::equal(double a, double b) {
+	return (a - int(a) == b - int(b));
+}
+
 #endif //POO_MULTISET_COMPARATOR_H
