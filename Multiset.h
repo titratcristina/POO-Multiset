@@ -38,4 +38,14 @@ public:
 	~Multiset();                                // destructor
 };
 
+// constructor fără parametrii care inițializează un multiset gol
+template<class T, class F>
+Multiset<T, F>::Multiset() {
+	distinctSize = 0;            // numărul elementelor distincte este 0
+	size = 0;                    // numărul tuturor elementelor este 0
+	head = new Node;
+	head->next = head;
+	head->prev = head;
+}
+
 #endif //POO_MULTISET_MULTISET_H
