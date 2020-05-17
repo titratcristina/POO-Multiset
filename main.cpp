@@ -32,6 +32,10 @@ void multisetTests() {
 	N = M;                         	// copiez elementele din M in N
 	assert(N.find(2) == 1 && N.find(3) == 1 && N.find(4) == 1); // verific ca elementele din N să fie cele din M
 
+	N.insert(5);            	// inserez valori duplicate în multiset
+	N.insert(5);
+	assert(N.count(5) == 2);        // verific dacă numărul aparițiilor valorii 5 este 3
+
 }
 
 int main() {
